@@ -1,0 +1,32 @@
+body {
+	background-color: #004676; 
+}
+
+.jumbotron {
+	border-radius: 25px;
+	/*background-color: #ffe680;*/
+	background-color: #ffffff;
+	color: #ffffff;
+	width: 50%;
+	margin: 20px auto;
+	vertical-align: middle;
+	box-shadow: 2px 2px 5px #002239; 	
+}
+
+.sub_title {
+	color: #004676;
+	font-size: 250%; 
+/* 	font-family: Tahoma, Geneva, sans-serif; */
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-weight: bold;
+	text-shadow: 1px 1px #002d4a;
+}
+
+
+
+/*
+.text_boxes {
+	margin: 5px;
+}
+*/
+

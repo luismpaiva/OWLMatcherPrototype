@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1460026638014" name="duplicate:http://gres.uninova.pt/~fcm/ontology/temperaturesensor/" uri="temperaturesensor_v1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1460026638014" name="duplicate:http://gres.uninova.pt/~fcm/ontology/temperaturesensor/" uri="temperaturesensor_v2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1460026638014" name="duplicate:http://gres.uninova.pt/~fcm/ontology/temperaturesensor/" uri="temperaturesensor_v2_1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1460026638014" name="duplicate:http://gres.uninova.pt/~fcm/ontology/temperaturesensor/" uri="temperaturesensor_v3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1460026638014" name="duplicate:http://gres.uninova.pt/~fcm/ontology/temperaturesensor/" uri="temperaturesensor_v3_1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1460026638014" name="http://www.co-ode.org/ontologies/pizza/pizza.owl" uri="pizza.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1460026638014" name="http://www.example.org/ontology3e84710c:1139cb9e449:-8000" uri="wine.owl"/>
+    </group>
+</catalog>

@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#"
+     xml:base="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#hasUnits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#hasUnits">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureSensor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureUnits"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureSensor"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#IndoorTempSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#IndoorTempSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#OutdoorTempSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#OutdoorTempSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureSensor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureUnits -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureUnits"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#Celsius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#Celsius">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureUnits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#Fahrenheit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#Fahrenheit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureUnits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#Kelvin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#Kelvin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luis/ontologies/2016/3/untitled-ontology-40#TemperatureUnits"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

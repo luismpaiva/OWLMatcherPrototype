@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:template match="/">
+    <datavalues>
+      <sensor1temp>        <xsl:value-of select="/datavalues/indoorTemp" />       </sensor1temp>
+      <sensor1temp>        <xsl:value-of select="/datavalues/outdoorTemp" />      </sensor1temp>
+      <sensor2temp>        <xsl:value-of select="/datavalues/indoorTemp" />      </sensor2temp>
+      <sensor2temp>        <xsl:value-of select="/datavalues/outdoorTemp" />      </sensor2temp>
+      <units>        <xsl:value-of select="/datavalues/units" />      </units>
+      <units>        <xsl:value-of select="/datavalues/units2" />      </units>
+    </datavalues>
+  </xsl:template>
+</xsl:stylesheet>
+
+
+
+<xsl:variable name="color">
+
+  <xsl:choose>
+    <xsl:when test="individual==Celsius">
+      <xsl:value-of select="xs:annotation/mapping[individual=Celsius]"/>
+    </xsl:when>
+    <xsl:otherwise>
+		<xsl:when test="individual==Fahrenheit">
+		  <xsl:value-of select="xs:annotation/mapping[individual=Fahrenheit]"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:when test="individual==Kelvin">
+			  <xsl:value-of select="xs:annotation/mapping[individual=Kelvin]"/>
+			</xsl:when>
+		</xsl:otherwise>
+	</xsl:otherwise>
+  </xsl:choose>
+</xsl:variable> 
+
+
+
+<xsl:template name = "getConsumerValue" >
+  <xsl:param name = "providervalue" />
+  <xsl:choose>
+    <xsl:when test="providervalue='Cel'">C</xsl:when>
+    <xsl:when test="providervalue='Fah'">F</xsl:when>
+    <xsl:otherwise />
+  </xsl:choose>
+</xsl:template>
+
+
+
+  <?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:template match="/">
+    <datavalues>
+      <sensor1temp>        <xsl:value-of select="/datavalues/indoorTemp" />       </sensor1temp>
+      <sensor1temp>        <xsl:value-of select="/datavalues/outdoorTemp" />      </sensor1temp>
+      <sensor2temp>        <xsl:value-of select="/datavalues/indoorTemp" />      </sensor2temp>
+      <sensor2temp>        <xsl:value-of select="/datavalues/outdoorTemp" />      </sensor2temp>
+	  
+		<xsl:variable name="consumerValue">
+			<xsl:call-template name="getConsumerValue">
+				<xsl:with-param name="providervalue" select = "/datavalues/units" />
+			</xsl:call-template>
+		</xsl:variable> 
+      <units>        <xsl:value-of select="$consumerValue" />      </units>
+	  
+		<xsl:variable name="consumerValue">
+			<xsl:call-template name="templatename">
+				<xsl:with-param name="providervalue" select = "/datavalues/units2" />
+			</xsl:call-template>
+		</xsl:variable> 
+      <units>        <xsl:value-of select="$consumerValue" />      </units>
+    </datavalues>
+  </xsl:template>
+</xsl:stylesheet><?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:template match="/">
+    <datavalues />
+  </xsl:template>
+</xsl:stylesheet>
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:template match="/">
+    <datavalues>
+      <sensorTemp>
+        <xsl:value-of select="/datavalues/indoorTemp" />
+      </sensorTemp>
+      <units>
+        <xsl:value-of select="/datavalues/units" />
+      </units>
+    </datavalues>
+  </xsl:template>
+</xsl:stylesheet>
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:template match="/">
+    <data>
+      <sensorTemp>
+        <xsl:value-of select="/data/indoorTemp" />
+      </sensorTemp>
+      <units>
+        <xsl:value-of select="/data/units" />
+      </units>
+    </data>
+  </xsl:template>
+</xsl:stylesheet>

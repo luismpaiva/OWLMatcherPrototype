@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/"
+     xml:base="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasLocation">
+        <rdfs:range rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Location"/>
+        <rdfs:domain rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/TemperatureSensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasUnits -->
+
+    <owl:ObjectProperty rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasUnits">
+        <rdfs:domain rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+        <rdfs:range rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Units"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasValue">
+        <rdfs:domain rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/makes -->
+
+    <owl:ObjectProperty rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/makes">
+        <rdfs:range rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+        <rdfs:domain rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/TemperatureSensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasDateTime">
+        <rdfs:domain rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasLatitude">
+        <rdfs:domain rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/LatitudeLongitudeInDecimalDegrees"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasLongitude">
+        <rdfs:domain rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/LatitudeLongitudeInDecimalDegrees"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/hasValue">
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/AirDensity -->
+
+    <owl:Class rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/AirDensity">
+        <rdfs:subClassOf rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Humidity -->
+
+    <owl:Class rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Humidity">
+        <rdfs:subClassOf rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/LatitudeLongitudeInDecimalDegrees -->
+
+    <owl:Class rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/LatitudeLongitudeInDecimalDegrees">
+        <rdfs:subClassOf rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Light -->
+
+    <owl:Class rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Light">
+        <rdfs:subClassOf rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Location -->
+
+    <owl:Class rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Location"/>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement -->
+
+    <owl:Class rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Temperature -->
+
+    <owl:Class rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Temperature">
+        <rdfs:subClassOf rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/TemperatureSensor -->
+
+    <owl:Class rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/TemperatureSensor"/>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Units -->
+
+    <owl:Class rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Units"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Celsius -->
+
+    <owl:NamedIndividual rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Celsius">
+        <rdf:type rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Units"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Fahrenheit -->
+
+    <owl:NamedIndividual rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Fahrenheit">
+        <rdf:type rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Units"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Indoor -->
+
+    <owl:NamedIndividual rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Indoor">
+        <rdf:type rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Kelvin -->
+
+    <owl:NamedIndividual rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Kelvin">
+        <rdf:type rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Units"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Max -->
+
+    <owl:NamedIndividual rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Max">
+        <rdf:type rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Min -->
+
+    <owl:NamedIndividual rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Min">
+        <rdf:type rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Outdoor -->
+
+    <owl:NamedIndividual rdf:about="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Outdoor">
+        <rdf:type rdf:resource="http://gres.uninova.pt/~fcm/ontology/temperaturesensor/Measurement"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

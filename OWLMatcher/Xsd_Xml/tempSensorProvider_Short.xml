@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<datavalues>
+	<indoorTemp>72.3</indoorTemp>
+	<outdoorTemp>89.3</outdoorTemp>
+	<units>Fah</units>
+	<units2>Cel</units2>
+</datavalues>

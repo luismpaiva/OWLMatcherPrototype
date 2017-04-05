@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema attributeFormDefault="unqualified" 
+		   elementFormDefault="qualified" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:element name="datavalues" >
+    <xs:complexType>
+      <xs:sequence>
+        <!-- 
+        <xs:element type="xs:string" name="minTempY"	 sawsdl:modelReference="/Temp" />
+        <xs:element type="xs:string" name="units" 	     sawsdl:modelReference="/temperaturesensor/makes/measurement/hasUnits"/>
+        <xs:element type="xs:float"  name="indoorTemp"   sawsdl:modelReference="/temperaturesensor/makes/measurement/hasValue"/>
+        <xs:element type="xs:string" name="humidity"     />
+        <xs:element type="xs:float"  name="outdoorTemp"  sawsdl:modelReference="/temperaturesensor/makes/x/hasValue"/>
+        <xs:element type="xs:float"  name="setTemp"		 />
+        <xs:element type="xs:byte" 	 name="heat"		 />
+        <xs:element type="xs:byte" 	 name="cool"		 />
+        <xs:element type="xs:byte" 	 name="fan"			 />
+        <xs:element type="xs:byte" 	 name="hold"		 />
+        <xs:element type="xs:string" name="minTemp"		 sawsdl:modelReference="/TempDentroDeCasa" />
+        <xs:element type="xs:string" name="maxTemp"		 sawsdl:modelReference="/Temp/InTemp/RoomTemp" /> 
+        <xs:element type="xs:string" name="maxTempY"	 sawsdl:modelReference="/TempDentroDeCasa" />
+        <xs:element type="xs:byte"   name="relay1state"  sawsdl:modelReference="/Temp" />
+        <xs:element type="xs:byte" 	 name="heatMode"	 sawsdl:modelReference="/hasValue"/>
+        <xs:element type="xs:byte" 	 name="fanMode"		 />
+        <xs:element type="xs:byte" 	 name="filtChng" 	 />
+        <xs:element type="xs:float"  name="maxSTemp"	 />
+        <xs:element type="xs:float"  name="minSTemp"	 />
+        <xs:element type="xs:byte" 	 name="mode"		 />
+        <xs:element type="xs:int" 	 name="time"		 />
+        <xs:element type="xs:string" name="serialNumber" />
+        -->
+        <xs:element type="xs:byte"   name="relay6state"  sawsdl:modelReference="/BedRoomTemp[SleepRoomTempIndividual]" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

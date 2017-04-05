@@ -1,0 +1,60 @@
+@CHARSET "ISO-8859-1";
+textarea {
+    resize: none;
+}
+
+.panel-device-dimensions {
+/* 	width: 50%; */
+	margin: 20px 0;
+}
+
+.panel-central-area-dimensions {
+	height: 90%
+}
+
+.panel-danger > .panel-device-notcommunicating {
+	background-color: red /*!important*/;
+	color: white /*!important*/;
+}
+
+.panel-danger > .panel-device-communicating {
+	background-color: green /*!important*/;
+	color: white /*!important*/;
+}
+
+.panel-default > .panel-semantic-translator {
+	background-color: green /*!important*/;
+	color: white /*!important*/;
+}
+
+.panel-body-device {
+	text-align: left;
+}
+
+.panel-device-content {
+	max-height: 90px;
+	text-align: left;
+	overflow-y: scroll;
+}
+
+
+#row1-col1-row2 {
+	padding-top: 5px;
+}
+.wifi-image {
+  transform: translate(-25%, 80%);
+}
+
+
+body {
+	background-image:url(../images/arrowhead_blue_light.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	min-height: 600px
+}
+
+.panel-semantic_translator-head{
+	margin-top: 15px;
+}
+
+

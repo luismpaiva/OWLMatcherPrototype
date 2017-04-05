@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema attributeFormDefault="unqualified" 
+		   elementFormDefault="qualified" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:element name="datavalues" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:float"  name="indoorTemp"  sawsdl:modelReference="/IndoorTempSensor(1)/hasValue"                  />
+        <xs:element type="xs:float"  name="indoorTemp2" sawsdl:modelReference="/IndoorTempSensor(2)/hasValue"                  />
+        <xs:element type="xs:string" name="units"       sawsdl:modelReference="/IndoorTempSensor(1)/hasUnits/TemperatureUnits" />
+        <xs:element type="xs:string" name="units2"      sawsdl:modelReference="/IndoorTempSensor(2)/hasUnits/TemperatureUnits" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+      <xs:sequence>
+        <xs:element type="xs:float"  name="indoorTemp"  sawsdl:modelReference="/IndoorTempSensor/hasValue"                  connect="1" />
+        <xs:element type="xs:float"  name="indoorTemp2" sawsdl:modelReference="/IndoorTempSensor/hasValue"                  connect="2" />
+        <xs:element type="xs:string" name="units"       sawsdl:modelReference="/IndoorTempSensor/hasUnits/TemperatureUnits" connect="1" />
+        <xs:element type="xs:string" name="units2"      sawsdl:modelReference="/IndoorTempSensor/hasUnits/TemperatureUnits" connect="2" />
+      </xs:sequence>
+
+      <xs:sequence>
+        <xs:element type="xs:float"  name="indoorTemp"  sawsdl:modelReference="/IndoorTempSensor/hasValue[TemperatureUnits/Celsius]"   />
+        <xs:element type="xs:float"  name="indoorTemp2" sawsdl:modelReference="/IndoorTempSensor/hasValue[TemperatureUnits/Celsius]"   />
+        <xs:element type="xs:string" name="units"       sawsdl:modelReference="/IndoorTempSensor/hasUnits/TemperatureUnits/Fahrenheit" />
+        <xs:element type="xs:string" name="units2"      sawsdl:modelReference="/IndoorTempSensor/hasUnits/TemperatureUnits/Celsius"    />
+      </xs:sequence>
+	  

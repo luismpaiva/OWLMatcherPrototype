@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<datavalues>
+	<units>F</units>
+	<sensor1temp>xx.x</sensor1temp>
+	<sensor2temp>xx.x</sensor2temp>
+	<sensor3temp>xx.x</sensor3temp>
+	<sensor4temp>xx.x</sensor4temp>
+	<relay1state>0</relay1state>
+	<relay2state>0</relay2state>
+</datavalues>

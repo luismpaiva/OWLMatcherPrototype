@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema attributeFormDefault="unqualified" 
+		   elementFormDefault="qualified" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+		   xmlns:a3st="http://gres.uninova.pt/a3st">
+	<xs:element name="data" >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="xs:float"   name="sensorTemp" sawsdl:modelReference="/TemperatureSensor/hasValue" />
+				<xs:element type="xs:string"   name="units"  sawsdl:modelReference="/TemperatureSensor/hasUnits/TemperatureUnits" a3st:mpi-ref="2;3"/>
+				<xs:element name="humidityData"  > 
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:float"  name="sensorHumidity" />
+							<xs:element type="xs:string" name="humUnits"  />
+							<xs:element name="IndoorHumidityData"  > 
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:float"  name="IndoorSensorHumidity" />
+										<xs:element type="xs:float"  name="IndoorSensorHumidity2" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute type="xs:float"   name="sensorTempAtt" sawsdl:modelReference="/TemperatureSensor/hasValue" />
+		</xs:complexType>
+	</xs:element>
+	<xs:annotation>
+		<a3st:map-data-ind a3st:mdi-id='1' individual="Celsius">C</a3st:map-data-ind>
+		<a3st:map-data-ind a3st:mdi-id='2' individual="Fahrenheit">F</a3st:map-data-ind>
+		<a3st:map-data-ind a3st:mpi-id='3' individual="Kelvin">K</a3st:map-data-ind>
+	</xs:annotation>
+</xs:schema>
+
+
+

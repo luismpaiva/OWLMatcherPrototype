@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema attributeFormDefault="unqualified" 
+		   elementFormDefault="qualified" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:element name="datavalues" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:byte"   name="sensor1temp" sawsdl:modelReference="/InTemp/hasRoomTempValue/RoomTemp" />
+        <xs:element type="xs:byte"   name="sensor2temp" sawsdl:modelReference="/InTemp/hasRoomTempValue/BedRoomTemp" />
+        <!-- 
+         <xs:element type="xs:string" name="sensor2temp" sawsdl:modelReference="/TempInterior" />
+        <xs:element type="xs:string" name="units" 		sawsdl:modelReference="/temperaturesensor/makes/measurement/hasUnits"/>
+        <xs:element type="xs:string" name="sensor1temp" sawsdl:modelReference="/temperaturesensor/makes/measurement/hasValue"/>
+        <xs:element type="xs:string" name="sensor3temp" sawsdl:modelReference="/x/temperaturesensor/y/makes/measurement/hasValue"/>
+        <xs:element type="xs:string" name="sensor4temp" sawsdl:modelReference="/Temp/InTemp" />
+        <xs:element type="xs:byte"   name="relay1state" sawsdl:modelReference="/Temp" />
+        <xs:element type="xs:string" name="maxTempY"	sawsdl:modelReference="/TempDentroDeCasa" />
+        <xs:element type="xs:byte"   name="relay2state" sawsdl:modelReference="/hasInTemp" />
+        <xs:element type="xs:byte"   name="relay3state" sawsdl:modelReference="/hasTempValue" />
+        <xs:element type="xs:byte"   name="relay4state" sawsdl:modelReference="/hasValue" />
+        <xs:element type="xs:byte"   name="relay5state" sawsdl:modelReference="/makes" />
+        <xs:element type="xs:byte"   name="relay6state" sawsdl:modelReference="/BedRoomTemp[DormitoryTempIndividual]" />
+        <xs:element type="xs:byte"   name="relay7state" sawsdl:modelReference="/InTemp/hasRoomTempValue/BedRoomTemp[DormitoryTempIndividual]" />
+        <xs:element type="xs:byte"   name="relay7state" sawsdl:modelReference="/BedRoomTemp" />
+         --> 
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

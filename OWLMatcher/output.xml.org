@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><datavalues>
+<sensor1temp>72.3</sensor1temp>
+<sensor1temp>89.3</sensor1temp>
+<sensor2temp>72.3</sensor2temp>
+<sensor2temp>89.3</sensor2temp>
+<units>F</units>
+<units>Celsius</units>
+</datavalues>

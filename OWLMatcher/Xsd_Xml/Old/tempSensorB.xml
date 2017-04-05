@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<datavalues>
+	<units>F</units>
+	<indoorTemp>72.3</indoorTemp>
+	<humidity>H37.4</humidity>
+	<outdoorTemp>89.3</outdoorTemp>
+	<setTemp>66.0</setTemp>
+	<heat>0</heat>
+	<cool>0</cool>
+	<fan>0</fan>
+	<hold>00</hold>
+	<minTemp>00:01 78.8</minTemp>
+	<maxTemp>14:12 97.4</maxTemp>
+	<minTempY>03:45 76.2</minTempY>
+	<maxTempY>14:39 95.4</maxTempY>
+	<heatMode>0</heatMode>
+	<fanMode>1</fanMode>
+	<filtChng>59</filtChng>
+	<maxSTemp>80.0</maxSTemp>
+	<minSTemp>60.0</minSTemp>
+	<mode>6</mode>
+	<time>1230941820</time>
+	<serialNumber>00:0C:C8:00:00:00</serialNumber>
+</datavalues>
